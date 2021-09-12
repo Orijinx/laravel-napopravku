@@ -17,11 +17,11 @@ class PostQuoteController extends BaseAPIController
             [
                 'text' => ['required'],
                 'author' => ['required', 'max:255'],
-                'tags' => ['array']
+                'tags' => ['array','exists:App\Models\tag,id']
             ]
         );
         if ($validator->fails()) {
-            return $this->Error($validator->errors(), 'Validation error');
+            return $this->Error($validator->errors(), 'Ошибка валидации');
 
         }
         $quote = new quote();
@@ -33,6 +33,6 @@ class PostQuoteController extends BaseAPIController
             $quote->Tags()->attach($request->tags);
         }
         
-        return $this->Success($quote, 'Good');
+        return $this->Success($quote, 'Цитата успешно добавлена!');
     }
 }
