@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/list',[App\Http\Controllers\API\QuoteListController::class,'QuoteList']);
 Route::post('/post',[App\Http\Controllers\API\PostQuoteController::class,'PostQuote']);
+Route::get('/tags',[App\Http\Controllers\API\TagListController::class,'TagList']);
