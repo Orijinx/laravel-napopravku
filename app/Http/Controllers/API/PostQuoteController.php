@@ -34,6 +34,7 @@ class PostQuoteController extends BaseAPIController
         //Прикрепление тэгов к цитате
         $quote->Tags()->attach($request->tags);
 
-        return $this->Success($quote, 'Цитата успешно добавлена!');
+        // return $this->Success($quote, 'Цитата успешно добавлена!');
+        return redirect()->route('list');
     }
 }

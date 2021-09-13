@@ -18,7 +18,6 @@ class CreateTagsTable extends Migration
             $table->string('name');
             // $table->bigInteger('quote_id');
             // $table->foreign('quote_id')->references('id')->on('quotes');
-            $table->timestamps();
         });
     }
 
