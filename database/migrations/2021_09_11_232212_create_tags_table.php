@@ -13,11 +13,10 @@ class CreateTagsTable extends Migration
      */
     public function up()
     {
+        // Таблица тэгов
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            // $table->bigInteger('quote_id');
-            // $table->foreign('quote_id')->references('id')->on('quotes');
+            $table->string('name'); //Название тэга
         });
     }
 

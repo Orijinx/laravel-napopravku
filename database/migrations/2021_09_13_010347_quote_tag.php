@@ -13,12 +13,12 @@ class QuoteTag extends Migration
      */
     public function up()
     {
-        //
+        //Соединительная таблица многие ко многим
         Schema::create('quote_tag', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tag_id');
+            $table->unsignedBigInteger('tag_id'); //Foreign key на таблицу тэгов
             $table->foreign('tag_id')->references('id')->on('tags');
-            $table->unsignedBigInteger('quote_id');
+            $table->unsignedBigInteger('quote_id');//Foreign key на цитаты
             $table->foreign('quote_id')->references('id')->on('quotes');
         });
     }

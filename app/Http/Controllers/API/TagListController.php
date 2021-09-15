@@ -9,7 +9,7 @@ class TagListController extends BaseAPIController
 {
     //
     public function TagList(){
-        $tags = tag::all();
+        $tags = tag::all();//Получение всего списка тэгов
         return $this->Success($tags,"Список всех Тэгов");
     }
 }

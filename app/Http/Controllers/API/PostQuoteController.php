@@ -16,9 +16,9 @@ class PostQuoteController extends BaseAPIController
         $validator = Validator::make(
             $request->all(),
             [
-                'text' => ['required'],
-                'author' => ['required', 'max:255'],
-                'tags' => ['required', 'array', 'exists:App\Models\tag,id']
+                'text' => ['required'], //Обязательное поле
+                'author' => ['required', 'max:255'], //Обязательное поле, максимальная длина:255
+                'tags' => ['required','max:255', 'array', 'exists:App\Models\tag,id']//Обязательное поле, максимальная длина:255, массив, и запись должна существовать в таблице Tags
             ]
         );
         //Проверка ошибок валидации

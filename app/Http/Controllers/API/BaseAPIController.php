@@ -4,9 +4,10 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 
+// Базовый роутер для создание единого паттерна ответа от сервера
 class BaseAPIController extends Controller
 {
-    //
+    //Удачно
     public function Success($data,string $msg){
         $response = [
             'status'=>true,
@@ -15,7 +16,7 @@ class BaseAPIController extends Controller
         ];
         return response()->json($response);
     }
-    //
+    //С ошибками
     public function Error($error,string $msg){
         $response = [
             'status'=>false,

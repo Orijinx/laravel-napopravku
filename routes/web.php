@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Простой рут для работы VUE
 Route::get('/', function () {
     return view('vue-app.index');
 });

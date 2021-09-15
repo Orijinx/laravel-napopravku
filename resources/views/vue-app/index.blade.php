@@ -16,7 +16,7 @@
         />
         <link href="{{asset('/js/about.34fc5cfc.js')}}" rel="prefetch" />
         <link href="{{asset('/css/chunk-vendors.526f04ed.css')}}" rel="preload" as="style" />
-        <link href="{{asset('/js/app.e113ec89.js" rel="preload')}}" as="script" />
+        <link href="{{asset('/js/app.c27d513b.js')}}" rel="preload" as="script" />
         <link href="{{asset('/js/chunk-vendors.2e5e4c47.js')}}" rel="preload" as="script" />
         <link href="{{asset('/css/chunk-vendors.526f04ed.css')}}" rel="stylesheet" />
     </head>
@@ -29,6 +29,6 @@
         >
         <div id="app"></div>
         <script src="{{asset('/js/chunk-vendors.2e5e4c47.js')}}"></script>
-        <script src="{{asset('/js/app.e113ec89.js')}}"></script>
+        <script src="{{asset('/js/app.c27d513b.js')}}"></script>
     </body>
 </html>
